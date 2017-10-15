@@ -2,8 +2,10 @@
 hp = MAXHP;
 name = "";
 team = T_RED;
+heroType = heroes.square;
+
 soul = 0;
-capacity = 2;
+
 spawnx = 0;
 spawny = 0;
 

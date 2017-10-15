@@ -15,7 +15,7 @@ if (connection < 0) {
 }
 
 playermap = ds_map_create();
-send_buffer = buffer_create(256, buffer_fixed, 1);
+send_buffer = buffer_create(512, buffer_fixed, 1);
 
 with (o_base) {
 	if (team == global.team) {
@@ -35,6 +35,7 @@ buffer_write(send_buffer, buffer_u16, spawn_x);
 buffer_write(send_buffer, buffer_u16, spawn_y);
 buffer_write(send_buffer, buffer_string, username);
 buffer_write(send_buffer, buffer_u8, global.team);//team);
+buffer_write(send_buffer, buffer_u8, global.hero);
 network_send_packet(socket, send_buffer, buffer_tell(send_buffer));
 #endregion
 

@@ -33,7 +33,7 @@
 // collision 
 #macro MOVE_GAP 0
 
-enum hero {
+enum heroes {
 	square = 0,
 	rectangle = 1,
 }

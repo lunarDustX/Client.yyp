@@ -1,6 +1,6 @@
 /// @description 
 //team
-image_index = team;
+if (image_index != team) image_index = team;
 
 if (!instance_exists(o_timer)) exit; 
 if (dead) exit;

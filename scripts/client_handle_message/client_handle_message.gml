@@ -1,8 +1,8 @@
 ///@description client_handle_message
 ///@arg buffer
-var 
-buffer = argument0,
-message_id = buffer_read(buffer, buffer_u8);
+var  buffer = argument0;
+//buffer_seek(buffer, buffer_seek_start, 0);
+var message_id = buffer_read(buffer, buffer_u8);
 
 switch (message_id) {
 	case MESSAGE_GETID:
@@ -10,18 +10,21 @@ switch (message_id) {
 	break;
 	
 	case MESSAGE_JOIN:
+		//show_message(string(buffer_get_size(buffer)));
 		var
 		clientSocket = buffer_read(buffer, buffer_u16),
 		xx = buffer_read(buffer, buffer_u16),
 		yy = buffer_read(buffer, buffer_u16),
 		username = buffer_read(buffer, buffer_string),
 		team = buffer_read(buffer, buffer_u8),
+		heroType = buffer_read(buffer, buffer_u8),
 		
 		player = client_get_player(clientSocket);
 		player.name = username;
 		player.x = xx;
 		player.y = yy;
 		player.team = team;
+		player.heroType = heroType;
 		player.spawnx = xx;
 		player.spawny = yy;
 	break;

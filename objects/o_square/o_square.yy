@@ -1,13 +1,22 @@
 {
-    "id": "44b653c7-5ee8-4da7-9f64-bf06d07816fd",
+    "id": "cba43b63-1419-4fc5-adcb-045731feea7f",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_hero_square",
+    "name": "o_square",
     "eventList": [
-        
+        {
+            "id": "e179ad57-9f89-4fa0-9c8a-013e1a99c19a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "cba43b63-1419-4fc5-adcb-045731feea7f"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "663da465-dc4a-4401-93db-4f612be47f2d",
+    "parentObjectId": "989f3043-56d4-40bd-a4f5-8899dccff7b1",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

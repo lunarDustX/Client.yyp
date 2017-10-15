@@ -10,6 +10,11 @@ if (keyboard_check(ord("D")) && place_free(x + spd + MOVE_GAP, y)) {
 		x += spd;
 		move = true;
 	}
+} else if (keyboard_check(ord("D"))){
+	while place_free(x+1, y) {
+		x += 1;	
+		move = true;
+	}
 }
 
 if (keyboard_check(ord("A")) && place_free(x - spd - MOVE_GAP, y)) {
@@ -17,6 +22,11 @@ if (keyboard_check(ord("A")) && place_free(x - spd - MOVE_GAP, y)) {
 	if (base != noone && team != base.team) {
 	} else {
 		x -= spd;
+		move = true;
+	}
+} else if (keyboard_check(ord("A"))){
+	while place_free(x-1, y) {
+		x -= 1;	
 		move = true;
 	}
 }
@@ -28,6 +38,11 @@ if (keyboard_check(ord("S")) && place_free(x, y + spd + MOVE_GAP)) {
 		y += spd;
 		move = true;
 	}
+} else if (keyboard_check(ord("S"))){
+	while place_free(x, y+1) {
+		y+=1;
+		move = true;
+	}
 }
 
 if (keyboard_check(ord("W")) && place_free(x, y - spd - MOVE_GAP)) {
@@ -35,6 +50,11 @@ if (keyboard_check(ord("W")) && place_free(x, y - spd - MOVE_GAP)) {
 	if (base != noone && team != base.team) {
 	} else {
 		y -= spd;
+		move = true;
+	}
+} else if (keyboard_check(ord("W"))){
+	while place_free(x, y-1) {
+		y-=1;
 		move = true;
 	}
 }
