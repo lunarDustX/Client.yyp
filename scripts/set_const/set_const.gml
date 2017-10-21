@@ -19,16 +19,24 @@
 #macro MESSAGE_BASEHP 12
 #macro MESSAGE_STARTGAME 13
 #macro MESSAGE_ENDGAME 14
+#macro MESSAGE_BOMB 15
 
 // shoot settings
-#macro SHOOT_RANGE 250
+#macro SHOOT_RANGE 300
 #macro AMMOPERSHOOT 4
 #macro SHOOT_COOLING room_speed
-#macro BULLET_SPEED 12
+#macro BULLET_SPEED 16
+
+#macro BOMB_RADIUS 64
 
 // player attribute
 #macro MAXHP 6
-#macro PLAYER_SPD 4
+#macro PLAYER_SPD 6
+#macro REBORN_TIME 6
+
+//
+#macro BASE_LOOT_RANGE 100
+
 
 // collision 
 #macro MOVE_GAP 0

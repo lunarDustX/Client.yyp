@@ -51,8 +51,13 @@ switch (message_id) {
 	case MESSAGE_HIT:
 		var 
 		clientSocket = buffer_read(buffer, buffer_u16),
+		damage = buffer_read(buffer, buffer_s16), //s16
 		playerHurt = client_get_player(clientSocket);
-		playerHurt.hp--;
+		//playerHurt.hp -= damage;
+		playerHurt.hp = clamp(playerHurt.hp-damage, 0, MAXHP);
+		if (damage > 0) {
+			playerHurt.flash = 1;
+		}
 	break;
 	
 	case MESSAGE_SHOOT:
@@ -71,12 +76,31 @@ switch (message_id) {
 		}
 	break;
 	
+	case MESSAGE_BOMB:
+		var
+		clientSocket = buffer_read(buffer, buffer_u16),
+		xx = buffer_read(buffer, buffer_u16),
+		yy = buffer_read(buffer, buffer_u16),
+		player = client_get_player(clientSocket),
+		bomb = instance_create_layer(xx, yy, "Instances", o_bomb);
+		
+		with (bomb) {
+			self.parent = player;
+			image_index = player.team;
+		}
+		
+	break;
+	
 	case MESSAGE_SPAWN:
 		var
 		xx = buffer_read(buffer, buffer_u16),
 		yy = buffer_read(buffer, buffer_u16);
 		
 		var soul = instance_create_layer(xx, yy, "Instances", o_soul);
+		
+		if (!instance_exists(o_reminder)) {
+			instance_create_layer(0, 0, "Instances", o_reminder);	
+		}
 	break;
 	
 	case MESSAGE_PICK:
@@ -110,22 +134,16 @@ switch (message_id) {
 			y = spawny;
 			hp = MAXHP;
 		}
-		// reborn
-		/*
-		// solution 1:
-		instance_deactivate_object(player);
+				
 		var re = instance_create_layer(0,0,"Instances", o_reborn);
-		re.alarm[0] = 6 * room_speed;
-		re.dead = player;
-		*/
-		
-		var re = instance_create_layer(0,0,"Instances", o_reborn);
-		re.alarm[0] = 6 * room_speed;
+		//re.alarm[0] = 6 * room_speed;
 		re.dead = player;
 		with (player) {
 			visible = false;
 			self.dead = true;
 		}
+		
+		//instance_create_layer(0,0,"Instances", o_dead_timer);
 	break;
 	
 	

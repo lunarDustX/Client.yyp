@@ -10,3 +10,5 @@ spawnx = 0;
 spawny = 0;
 
 dead = false;
+
+flash = 0;
