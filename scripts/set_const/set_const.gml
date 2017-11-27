@@ -1,5 +1,5 @@
 //
-#macro GAMEPAD_MAGNITUDE 0.4
+#macro GAMEPAD_MAGNITUDE 0.3
 
 // team
 #macro T_RED 0
@@ -23,12 +23,16 @@
 #macro MESSAGE_STARTGAME 13
 #macro MESSAGE_ENDGAME 14
 #macro MESSAGE_BOMB 15
+#macro MESSAGE_KILL 16
+#macro MESSAGE_DECREASE 17
+
+
 
 // shoot settings
-#macro SHOOT_RANGE 300
+#macro BULLET_RANGE 256
 #macro AMMOPERSHOOT 4
 #macro SHOOT_COOLING room_speed
-#macro BULLET_SPEED 14
+#macro BULLET_SPEED 22
 
 #macro BOMB_RADIUS 64
 

@@ -9,3 +9,9 @@ if (soul > 0) {
 		draw_sprite(s_soul, 1, (bbox_left+8)+(i*16), y);
 	}
 }
+
+#region //draw bullet line
+if (can_shoot && magnitude_shoot > GAMEPAD_MAGNITUDE) {
+	draw_sprite_ext(s_bullet_line, 0, x, y, 1, 1, dir_shoot, c_white, .6);	
+}
+#endregion

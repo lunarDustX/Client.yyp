@@ -60,6 +60,12 @@ switch (message_id) {
 		}
 	break;
 	
+	case MESSAGE_KILL:
+		var clientSocket = buffer_read(buffer, buffer_u16),
+			player = client_get_player(clientSocket);
+			player.bombs++;
+	break;
+	
 	case MESSAGE_SHOOT:
 		var 
 		clientSocket = buffer_read(buffer, buffer_u16),
@@ -88,7 +94,6 @@ switch (message_id) {
 			self.parent = player;
 			image_index = player.team;
 		}
-		
 	break;
 	
 	case MESSAGE_SPAWN:
@@ -133,6 +138,7 @@ switch (message_id) {
 			x = spawnx;
 			y = spawny;
 			hp = MAXHP;
+			bombs = 0;
 		}
 				
 		var re = instance_create_layer(0,0,"Instances", o_reborn);
@@ -163,19 +169,15 @@ switch (message_id) {
 		}
 	break;
 	
-	/*
-	case MESSAGE_BASEHP:
-		var 
-		team = buffer_read(buffer, buffer_u16), 
-		hp = buffer_read(buffer, buffer_u16);
-		
+	case MESSAGE_DECREASE:
+		var team = buffer_read(buffer, buffer_u16);
 		with (o_base) {
-			if (self.team == team) {
-				self.hp = hp;
+			if (team == self.team) {
+				self.soul--;	
 			}
 		}
 	break;
-	*/
+
 	case MESSAGE_LOOT:
 		var team = buffer_read(buffer, buffer_u16),
 			xx = buffer_read(buffer, buffer_u16),

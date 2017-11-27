@@ -4,6 +4,7 @@ event_inherited();
 spd = PLAYER_SPD;
 can_shoot = true;
 bomb_ready = true;
+
 //ammo = AMMOPERSHOOT;
 
 switch (global.hero) {

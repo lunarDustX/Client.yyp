@@ -2148,6 +2148,25 @@
             }
         },
         {
+            "Key": "f64f8d1b-55fd-4b3e-b033-9401af7882dd",
+            "Value": {
+                "id": "56893231-5ad8-414a-a174-f2afe76a1904",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/s_bullet_line\/s_bullet_line.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f70ccb07-f902-495f-b090-77ffb2e925ad",
             "Value": {
                 "id": "efe78976-4d52-4244-b0dd-6ecd0a3f7773",
