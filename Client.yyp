@@ -248,6 +248,25 @@
             }
         },
         {
+            "Key": "1883e64f-ccf2-4e1f-b8d5-af6c5a6d9ed6",
+            "Value": {
+                "id": "8e4913fa-937b-4185-8471-b6831854933c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/s_bullet_round\/s_bullet_round.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "19df49a5-b365-4c2c-b3de-371946135ba3",
             "Value": {
                 "id": "7d6a6e79-50eb-4d59-a88b-8af643e9c708",
@@ -1822,6 +1841,25 @@
                 ],
                 "resourcePath": "sprites\/s_team\/s_team.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d9ea6942-2848-45ec-a8fd-6683b8e630b0",
+            "Value": {
+                "id": "3a08307e-782a-43aa-b855-43cd6e0d12ea",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "rooms\/r_tunnel\/r_tunnel.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

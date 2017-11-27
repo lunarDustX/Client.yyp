@@ -190,6 +190,8 @@ switch (message_id) {
 	
 	case MESSAGE_STARTGAME:
 		with (o_mask) instance_destroy();
-		instance_create_layer(0,0, "Instances", o_timer);
+		var matchTime = buffer_read(buffer, buffer_u16);
+		var timer = instance_create_layer(0,0, "Instances", o_timer);
+		timer.time = matchTime;
 	break;
 }

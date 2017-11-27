@@ -16,3 +16,14 @@ switch (global.hero) {
 	break;
 }
 
+//gamepad
+xaxis = 0;
+yaxis = 0;
+dir = 0;
+magnitude = 0;
+
+xaxis_shoot = 0;
+yaxis_shoot = 0;
+dir_shoot = 0;
+magnitude_shoot = 0;
+

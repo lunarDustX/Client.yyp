@@ -7,7 +7,8 @@
         "9b8ccf4f-225d-495c-9302-07a9252c34a1",
         "95de8692-7437-467c-8993-8190e8468e88",
         "d2eef219-d0ec-450c-ac44-0f9aea67f08d",
-        "b181bd3e-c515-4332-ba54-401fad883bcd"
+        "b181bd3e-c515-4332-ba54-401fad883bcd",
+        "d9ea6942-2848-45ec-a8fd-6683b8e630b0"
     ],
     "filterType": "GMRoom",
     "folderName": "MAP",
